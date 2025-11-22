@@ -175,5 +175,68 @@ img {
   transform: translateY(-4px);
   border-color: var(--brand);
 }
+/* ========== FORCE BIG BUTTONS UNDER HERO (OVERRIDE ANY OLD CSS) ========== */
+
+.option-buttons{
+  padding: 18px 0 40px !important;
+  margin-top: 0 !important;          /* يكون تحت الصورة مباشرة */
+  background: transparent !important;
+}
+
+.option-container{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 22px !important;
+  flex-wrap: wrap !important;
+}
+
+/* the two big boxes */
+.big-btn{
+  min-width: 320px !important;
+  height: 90px !important;
+  padding: 0 28px !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  border-radius: 16px !important;
+  text-decoration: none !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  box-shadow: var(--shadow) !important;
+  transition: 0.25s ease !important;
+}
+
+/* blue glowing button */
+.primary-btn{
+  background: var(--brand) !important;
+  color: #000 !important;
+  box-shadow: 0 6px 22px rgba(56,189,248,0.45) !important;
+}
+.primary-btn:hover{
+  transform: translateY(-4px) !important;
+}
+
+/* dark non-glowing button */
+.dark-btn{
+  background: #1e293b !important;
+  color: var(--text) !important;
+  border: 1px solid #ffffff20 !important;
+}
+.dark-btn:hover{
+  transform: translateY(-4px) !important;
+  border-color: var(--brand) !important;
+}
+
+/* Mobile */
+@media(max-width:650px){
+  .big-btn{
+    min-width: 260px !important;
+    height: 80px !important;
+    font-size: 19px !important;
+  }
+}
 
 /* -----------------*
