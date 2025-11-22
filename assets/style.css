@@ -130,5 +130,50 @@ img {
   border-radius: 0;
   margin-top: 20px;
 }
+/* BIG BUTTONS UNDER HERO IMAGE */
+.option-buttons {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.option-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.big-btn {
+  display: inline-block;
+  padding: 22px 40px;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+/* BLUE PRIMARY BUTTON */
+.primary-btn {
+  background: var(--brand);
+  color: #000;
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.4);
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+}
+
+/* DARK SECOND BUTTON */
+.dark-btn {
+  background: #1e293b;
+  color: var(--text);
+  border: 1px solid #ffffff1a;
+}
+
+.dark-btn:hover {
+  transform: translateY(-4px);
+  border-color: var(--brand);
+}
 
 /* -----------------*
