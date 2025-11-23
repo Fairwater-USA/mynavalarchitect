@@ -212,3 +212,7 @@ img{max-width:100%; display:block}
   .hero-image img{height:300px}
   .big-btn{min-width:260px; height:80px; font-size:19px;}
 }
+/* HIDE ANY STRAY/OLD LINKS DIRECTLY UNDER BODY */
+body > a {
+  display: none !important;
+}
