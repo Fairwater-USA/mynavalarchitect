@@ -335,72 +335,64 @@ img{max-width:100%; display:block}
   .hero-left h1{font-size:34px}
   .hero-card img{height:300px}
 }
-/* ===== CLASS SOCIETIES LOGOS (PRO) ===== */
+/* ===== CLASS SOCIETIES LOGOS – WHITE STRIP VERSION ===== */
+
 .logos-section{
   margin-top: 40px;
 }
 
 .logos-head h2{
-  margin:0 0 6px;
-  font-size:22px;
-  font-weight:700;
-  letter-spacing:.3px;
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: .3px;
 }
+
 .logos-head p{
-  margin:0 0 14px;
-  font-size:14px;
-  color:var(--muted);
+  margin: 0 0 14px;
+  font-size: 14px;
+  color: var(--muted);
 }
 
-/* السطر الرئيسي للخلفية */
+/* MAIN WHITE BAR */
 .logos-row{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:center;
-  gap:18px;
-  padding:18px 18px;
-  background:linear-gradient(180deg, rgba(10,25,60,.9), rgba(8,18,45,.9));
-  border:1px solid rgba(255,255,255,.06);
-  border-radius:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,.35);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 26px 28px;
+  background: #ffffff;   /* <<<<<< WHITE BAR */
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-/* كل لوجو في badge فاتح */
+/* WHITE BADGE REMOVED — LOGOS DIRECTLY ON WHITE BAR */
 .logo-badge{
-  height:64px;
-  min-width:120px;
-  padding:8px 14px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:rgba(255,255,255,.92);
-  border-radius:10px;
-  border:1px solid rgba(0,0,0,.04);
-  transition:.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 60px;
 }
 
-/* شكل اللوجو نفسه */
 .logo-badge img{
-  max-height:44px;
-  max-width:140px;
-  object-fit:contain;
+  max-height: 48px;
+  max-width: 160px;
+  object-fit: contain;
+  transition: .2s ease;
 }
 
-/* Hover بسيط احترافي */
-.logo-badge:hover{
-  transform:translateY(-2px);
-  box-shadow:0 6px 18px rgba(0,0,0,.25);
+.logo-badge:hover img{
+  transform: scale(1.03);
+  opacity: .95;
 }
 
-@media (max-width:700px){
-  .logo-badge{
-    height:56px;
-    min-width:100px;
-  }
+@media (max-width: 700px){
   .logo-badge img{
-    max-height:36px;
-    max-width:120px;
+    max-height: 40px;
+    max-width: 130px;
   }
 }
 
