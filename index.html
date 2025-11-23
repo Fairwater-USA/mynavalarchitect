@@ -4,18 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Naval Architect</title>
+
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="images/hero-ship.jpg">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">
-        ⚓ <span>My Naval Architect</span>
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#" class="brand">
+        <span class="brand-icon">⚓</span>
+        <span class="brand-text">My Naval Architect</span>
       </a>
 
-      <nav class="nav-links">
+      <button class="nav-toggle" id="navToggle">☰</button>
+
+      <nav class="nav-links" id="navLinks">
         <a href="#services">Services</a>
         <a href="#how">How it Works</a>
         <a href="#compliance">Compliance</a>
@@ -29,177 +34,364 @@
   </header>
 
 
- <!-- ===================== HERO SECTION ===================== -->
-<section class="hero-wrapper">
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-inner">
 
-  <div class="hero-grid">
+      <div class="hero-left">
+        <div class="badge">For Ship Owners • In-Service Vessels</div>
+        <h1>Start Your Ship Modification Project in Minutes</h1>
+        <p>
+          Fast, class-ready naval architecture support for in-service ships.
+          Drawings, stability reassessment, and compliance deliverables — remotely and efficiently.
+        </p>
 
-    <!-- ===== Left Text Area ===== -->
-    <div class="hero-text">
-      <h1 class="hero-title">My Naval Architect</h1>
-      <p class="hero-subtitle">Fast, class-ready modification support for ship owners.</p>
+        <div class="hero-actions">
+          <a href="#start" class="btn btn-primary">🚀 Start a Request</a>
+          <a href="#services" class="btn btn-ghost">📘 See Services</a>
+        </div>
 
-      <div class="hero-buttons">
-        <a href="#start" class="btn-primary">🚀 Start Your Project</a>
-        <a href="#services" class="btn-secondary">📘 See Our Services</a>
+        <div class="hero-chips">
+          <span class="chip">In-Service Retrofit Experts</span>
+          <span class="chip">Class-Ready Deliverables</span>
+          <span class="chip">Global Remote Support</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-img-wrap">
+          <img src="images/hero-ship.jpg" alt="Ship Modification" />
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-big">3–7 Days</div>
+              <div class="stat-small">Typical Turnaround</div>
+            </div>
+            <div class="stat">
+              <div class="stat-big">All Types</div>
+              <div class="stat-small">Supported Vessels</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== CLASS SOCIETIES ===================== -->
+  <section class="class-section">
+    <div class="container">
+      <h2>Trusted by Leading Class Societies</h2>
+      <p class="muted">
+        Class-ready deliverables aligned with major IACS members.
+      </p>
+
+      <div class="class-bar">
+        <img src="images/class/DNV_GL_logo.svg.png" alt="DNV" class="class-logo">
+        <img src="images/class/png-clipart-american-bureau-of-shipping-certification-classification-society-industry-abs-group-of-companies-inc-exhibition-hall-blue-text.png" alt="ABS" class="class-logo">
+        <img src="images/class/Bureau_Veritas.svg.png" alt="Bureau Veritas" class="class-logo">
+        <img src="images/class/RINA_logo.svg.png" alt="RINA" class="class-logo">
+        <img src="images/class/Lloyds-register-logo-2022.png" alt="Lloyd's Register" class="class-logo">
       </div>
     </div>
-
-    <!-- ===== Right Hero Image ===== -->
-    <div class="hero-img-box">
-      <img src="images/hero-ship.jpg" class="hero-img">
-      <div class="hero-tags">
-        <div class="tag">3–7 Days<br><span>Typical Turnaround</span></div>
-        <div class="tag">All Types<br><span>Supported Vessels</span></div>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ===================== CLASS SOCIETIES ===================== -->
-<section class="class-section">
-
-  <h2 class="section-title">Trusted by Leading Class Societies</h2>
-  <p class="section-subtitle">Class-ready deliverables aligned with major IACS members.</p>
-
-  <div class="class-bar">
-    <img src="images/class/DNV_GL_logo.svg.png" class="class-logo">
-    <img src="images/class/png-clipart-american-bureau-of-shipping-certification-classification-society-industry-abs-group-of-companies-inc-exhibition-hall-blue-text.png" class="class-logo">
-    <img src="images/class/RINA_logo.svg.png" class="class-logo">
-    <img src="images/class/Bureau_Veritas.svg.png" class="class-logo">
-    <img src="images/class/Lloyds-register-logo-2022.png" class="class-logo">
-  </div>
-
-</section>
+  </section>
 
 
-  <!-- START PROJECT -->
-  <section id="start" class="section start-section">
+  <!-- ===================== START PROJECT ===================== -->
+  <section class="section" id="start">
     <div class="container">
       <h2>Start Your Project</h2>
       <p class="muted">
         Choose one option to begin, upload your documents, and we handle the rest.
       </p>
 
-      <div class="cards-grid">
-        <div class="card">
-          <h3>🛠 Ship System Modification</h3>
-          <p>
-            Modify piping, electrical, safety, structural, or machinery systems.
-          </p>
-          <a class="card-link" href="#">Start System Modification →</a>
-        </div>
+      <div class="grid-2">
 
         <div class="card">
-          <h3>📄 Ship Document Modification</h3>
+          <div class="card-icon">🛠️</div>
+          <h3>Ship System Modification</h3>
           <p>
-            Update Stability Booklet, SEEMP, SOPEP, BWMP, EEXI/CII, manuals, etc.
+            Modify piping, electrical, safety, structural or machinery systems.
+            We deliver retrofit packages ready for class approval.
           </p>
-          <a class="card-link" href="#">Start Document Modification →</a>
+
+          <ul class="list">
+            <li>Piping (Fuel / Ballast / Bilge / Fire / Cargo)</li>
+            <li>Electrical SLD / Load Study / Cable Schedule</li>
+            <li>Safety Systems (LSA/FSA/FSS)</li>
+            <li>Structural Change / GA Updates</li>
+          </ul>
+
+          <a class="card-link" href="#contact">Start System Modification →</a>
         </div>
+
+
+        <div class="card">
+          <div class="card-icon">📄</div>
+          <h3>Ship Document Modification</h3>
+          <p>
+            Update stability booklets, manuals, SEEMP, SOPEP, BWMP, EEXI/CII files and more.
+          </p>
+
+          <ul class="list">
+            <li>Stability booklet revision after changes</li>
+            <li>SEEMP / SOPEP / BWMP / EE/CI compliance</li>
+            <li>Operations manuals / procedures updates</li>
+            <li>As-built documentation</li>
+          </ul>
+
+          <a class="card-link" href="#contact">Start Document Modification →</a>
+        </div>
+
       </div>
     </div>
   </section>
 
 
-  <!-- SERVICES -->
-  <section id="services" class="section">
+  <!-- ===================== SERVICES ===================== -->
+  <section class="section soft" id="services">
     <div class="container">
       <h2>Core Services</h2>
+      <p class="muted">Full engineering support for in-service ships.</p>
 
-      <div class="services-list">
-        <div class="service-item">
-          <h3>Modifications & Retrofit Drawings</h3>
-          <p>GA updates, structural drawings, foundations, penetrations, as-built revisions.</p>
+      <div class="grid-3">
+
+        <div class="mini-card">
+          <h4>Modifications & Retrofit Drawings</h4>
+          <p>GA updates, foundations, penetrations, as-built revisions.</p>
         </div>
 
-        <div class="service-item">
-          <h3>Stability Re-Assessment</h3>
-          <p>Intact & damage stability after modifications, updated cases and booklets.</p>
+        <div class="mini-card">
+          <h4>Stability Re-Assessment</h4>
+          <p>Intact & damage stability after modifications. Updated cases/booklets.</p>
         </div>
 
-        <div class="service-item">
-          <h3>Piping Systems</h3>
-          <p>P&amp;IDs, isometrics, valve/spec lists, class-compliant modifications.</p>
+        <div class="mini-card">
+          <h4>Piping Systems</h4>
+          <p>P&IDs, isometrics, valve/spec lists, class-compliant upgrades.</p>
         </div>
 
-        <div class="service-item">
-          <h3>Electrical Systems</h3>
-          <p>SLD updates, load studies, emergency power checks, cable schedules.</p>
+        <div class="mini-card">
+          <h4>Electrical Systems</h4>
+          <p>SLD updates, load studies, cable schedules, emergency power checks.</p>
         </div>
 
-        <div class="service-item">
-          <h3>Safety Systems</h3>
-          <p>Fire plan updates, LSA/FFA arrangements, escape routes, compliance.</p>
+        <div class="mini-card">
+          <h4>Safety Systems</h4>
+          <p>Fire plans, LSA/FSA arrangements, escape routes, compliance.</p>
         </div>
 
-        <div class="service-item">
-          <h3>Manuals & Plans</h3>
-          <p>SEEMP, SOPEP, BWMP, EEXI/CII, onboard manuals and procedures.</p>
+        <div class="mini-card">
+          <h4>Manuals & Plans</h4>
+          <p>SEEMP, SOPEP, BWMP, EEXI/CII files, onboard procedures.</p>
         </div>
+
       </div>
     </div>
   </section>
 
 
-  <!-- HOW IT WORKS -->
-  <section id="how" class="section">
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section class="section" id="how">
     <div class="container">
-      <h2>How It Works</h2>
+      <h2>How it Works</h2>
 
-      <div class="steps-grid">
-        <div class="step">1) Upload your drawings / documents</div>
-        <div class="step">2) We review and confirm scope</div>
-        <div class="step">3) Deliver class-ready package</div>
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>Select a Project Type</h4>
+          <p>System modification or document update.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>Upload Your Files</h4>
+          <p>Drawings, photos, class letters, stability booklet, etc.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>We Review & Quote</h4>
+          <p>You receive timeline, deliverables, and cost.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-num">4</div>
+          <h4>Delivery for Class Approval</h4>
+          <p>Final packages fully prepared for submission.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
 
-  <!-- COMPLIANCE -->
-  <section id="compliance" class="section">
+  <!-- ===================== COMPLIANCE ===================== -->
+  <section class="section soft" id="compliance">
     <div class="container">
       <h2>Compliance & Documentation</h2>
-      <p class="muted">
-        IMO / Class / Flag documentation aligned with your ship’s latest configuration.
-      </p>
+      <p class="muted">We prepare and revise all major IMO / Class / Flag documentation.</p>
+
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>IMO / Class Deliverables</h4>
+          <ul class="list">
+            <li>SEEMP Part I / II / III</li>
+            <li>SOPEP / SMPEP</li>
+            <li>BWMP (Ballast Water Management Plan)</li>
+            <li>EEXI Technical File</li>
+            <li>CII Calculations & Monitoring</li>
+          </ul>
+        </div>
+
+        <div class="mini-card">
+          <h4>Ship Manuals & Procedures</h4>
+          <ul class="list">
+            <li>Stability Booklets / Trim & Stability</li>
+            <li>Operations Manuals</li>
+            <li>Fire Control & Safety Plans</li>
+            <li>As-Built Updating After Modifications</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
 
-  <!-- SUBSCRIPTION PLACEHOLDER -->
-  <section id="subscription" class="section">
+  <!-- ===================== SUBSCRIPTION / PAYPAL ===================== -->
+  <section class="section" id="subscription">
     <div class="container">
-      <h2>Subscription</h2>
+      <h2>Subscription Program</h2>
       <p class="muted">
-        Monthly discounted-fees program (PayPal integration next).
+        Get discounted engineering fees with a fixed monthly plan.
+        Ideal for fleets and frequent retrofit needs.
       </p>
+
+      <div class="subscription-box">
+        <div class="sub-left">
+          <h3>Monthly Fleet Support</h3>
+          <p>
+            Priority response, discounted rates, and long-term technical support.
+          </p>
+          <ul class="list">
+            <li>Up to 20% discount on modifications</li>
+            <li>Priority review & turnaround</li>
+            <li>Dedicated project engineer</li>
+            <li>Annual compliance check</li>
+          </ul>
+        </div>
+
+        <div class="sub-right">
+          <h3>$___ / month</h3>
+          <p class="muted small">
+            Cancel anytime. Secure payment via PayPal.
+          </p>
+
+          <!-- ✅ PASTE YOUR PAYPAL SUBSCRIPTION BUTTON CODE HERE -->
+          <div class="paypal-embed">
+            <!-- مثال: ضع كود PayPal Button هنا -->
+            <p style="color:#fff;opacity:.8">
+              Paste your PayPal Subscription Button embed code here.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
 
-  <!-- FAQ -->
-  <section id="faq" class="section">
+  <!-- ===================== FAQ ===================== -->
+  <section class="section soft" id="faq">
     <div class="container">
       <h2>FAQ</h2>
-      <p class="muted">Coming soon.</p>
+
+      <div class="faq">
+        <details>
+          <summary>What documents do you need to start?</summary>
+          <p>
+            GA drawings, relevant system drawings, class comments, photos, and any existing stability booklet.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do you work with all vessel types?</summary>
+          <p>
+            Yes — cargo vessels, tankers, yachts, offshore, and special purpose ships.
+          </p>
+        </details>
+
+        <details>
+          <summary>How long do modifications take?</summary>
+          <p>
+            Typical turnaround is 3-7 days depending on scope.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can you submit to Class on our behalf?</summary>
+          <p>
+            Yes, we prepare packages fully ready for class submission and can support responses.
+          </p>
+        </details>
+      </div>
     </div>
   </section>
 
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section" id="contact">
     <div class="container">
-      <h2>Contact</h2>
-      <p class="muted">Email: info@mynavalarchitect.com</p>
+      <h2>Contact / Start a Request</h2>
+      <p class="muted">Send your project details and we’ll respond quickly.</p>
+
+      <form class="contact-form"
+        onsubmit="window.location.href='mailto:YOUR_EMAIL_HERE?subject=Ship Modification Request&body=' + encodeURIComponent(document.getElementById('msg').value); return false;">
+
+        <div class="grid-2">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Email Address" required>
+        </div>
+
+        <input type="text" placeholder="Vessel Name / IMO (optional)">
+
+        <textarea id="msg" rows="6" placeholder="Describe your modification or documents needed..." required></textarea>
+
+        <button type="submit" class="btn btn-primary wide">Send Request</button>
+
+        <p class="muted small">
+          This form uses email redirect (static GitHub Pages).  
+          If you want a real upload form later, we will add Formspree or a backend.
+        </p>
+      </form>
     </div>
   </section>
 
+
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <div class="container">© My Naval Architect</div>
+    <div class="container footer-inner">
+      <div>
+        <h4>My Naval Architect</h4>
+        <p class="muted small">
+          Professional naval architecture services for in-service ship modifications.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#how">How it Works</a>
+        <a href="#compliance">Compliance</a>
+        <a href="#subscription">Subscription</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="muted small">
+        © <span id="year"></span> My Naval Architect. All rights reserved.
+      </div>
+    </div>
   </footer>
 
+<script src="assets/main.js"></script>
 </body>
 </html>
