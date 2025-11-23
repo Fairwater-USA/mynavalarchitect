@@ -1,17 +1,28 @@
-const burger = document.querySelector(".burger");
-const navLinks = document.querySelector(".nav-links");
+// Sticky nav shadow on scroll + active section highlight
 
-if(burger){
-  burger.addEventListener("click", ()=>{
-    navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
-    navLinks.style.flexDirection = "column";
-    navLinks.style.background = "rgba(7,11,21,.95)";
-    navLinks.style.position = "absolute";
-    navLinks.style.top = "56px";
-    navLinks.style.right = "4%";
-    navLinks.style.padding = "12px";
-    navLinks.style.border = "1px solid rgba(255,255,255,.08)";
-    navLinks.style.borderRadius = "12px";
-    navLinks.style.gap = "10px";
-  });
-}
+const nav = document.getElementById("nav");
+const links = document.querySelectorAll(".nav-links a[data-section]");
+const sections = [...links].map(a => document.getElementById(a.dataset.section));
+
+// Shadow when scrolling
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 8) nav.classList.add("scrolled");
+  else nav.classList.remove("scrolled");
+});
+
+// Active link highlight using IntersectionObserver
+const obs = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.id;
+      const link = document.querySelector(`.nav-links a[data-section="${id}"]`);
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove("active"));
+        if (link) link.classList.add("active");
+      }
+    });
+  },
+  { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 }
+);
+
+sections.forEach(sec => sec && obs.observe(sec));
