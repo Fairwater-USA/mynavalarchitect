@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Membership • My Naval Architect</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR (same as main) -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__icon">⚓</span>
+        <span class="brand__text">My Naval Architect</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#how">How it Works</a>
+        <a href="index.html#compliance">Compliance</a>
+        <a href="membership.html">Membership</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="btn btn--ghost" href="index.html#start">Start Project</a>
+        <a class="btn btn--primary" href="index.html#start">Start Request</a>
+        <button class="nav__burger" id="burgerBtn" aria-label="menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="hero" style="padding-bottom:0;">
+    <div class="container hero__grid" style="grid-template-columns:1fr;">
+      <div class="hero__left">
+        <div class="pill">Membership Program</div>
+        <h1 class="hero__title" style="max-width:900px;">
+          Join the Discounted Monthly Membership
+        </h1>
+        <p class="hero__sub" style="max-width:840px;">
+          Priority response, discounted fees, and continuous compliance support.
+          Ideal for fleets and long-term retrofit plans.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <section class="start" style="padding-top:24px;">
+    <div class="container contact__grid">
+      <!-- LEFT: BENEFITS -->
+      <div>
+        <h2 class="section-title">What You Get</h2>
+        <p class="section-sub">
+          Simple monthly membership that saves time and cost for ship owners.
+        </p>
+        <ul class="card__list">
+          <li>Priority technical response</li>
+          <li>Discounted engineering fees</li>
+          <li>Support across multiple vessels</li>
+          <li>Rapid compliance updates (SEEMP / BWMP / EEXI / CII)</li>
+        </ul>
+
+        <div class="card" style="margin-top:12px;">
+          <h3 style="margin-top:0;">Payment (PayPal)</h3>
+          <p class="section-sub" style="margin-bottom:8px;">
+            We will place your PayPal subscription button here.
+          </p>
+
+          <!-- PAYPAL PLACEHOLDER -->
+          <div style="color:var(--muted); font-size:14px;">
+            [ PayPal subscription widget will be embedded here next step ]
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <form class="contact__form" id="membershipForm">
+        <h2 class="section-title" style="margin-bottom:0;">Start Membership</h2>
+        <p class="section-sub" style="margin-top:4px;">
+          Fill your details to create your membership profile.
+        </p>
+
+        <label>
+          Full Name
+          <input required name="name" type="text" placeholder="Your name"/>
+        </label>
+
+        <label>
+          Company Name
+          <input required name="company" type="text" placeholder="Company / Fleet"/>
+        </label>
+
+        <label>
+          Email
+          <input required name="email" type="email" placeholder="you@email.com"/>
+        </label>
+
+        <label>
+          Phone / WhatsApp
+          <input name="phone" type="text" placeholder="+1 ..."/>
+        </label>
+
+        <label>
+          Fleet Size (Number of Vessels)
+          <input name="fleet" type="number" min="1" placeholder="e.g. 3"/>
+        </label>
+
+        <label>
+          Typical Vessel Types
+          <input name="types" type="text" placeholder="Tanker / Bulk / Offshore / Yacht"/>
+        </label>
+
+        <label>
+          Notes
+          <textarea name="notes" rows="4" placeholder="Any specific needs or scope..."></textarea>
+        </label>
+
+        <button class="btn btn--primary" type="submit">
+          Save Membership Info
+        </button>
+
+        <div id="membershipMsg" style="display:none; color:#a6ffd0; font-weight:800;">
+          ✅ Info saved. We will contact you to activate payment.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> My Naval Architect.</div>
+      <div class="footer__links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const burgerBtn = document.getElementById('burgerBtn');
+    const navLinks = document.getElementById('navLinks');
+    burgerBtn.addEventListener('click', () => navLinks.classList.toggle('nav__links--open'));
+
+    // Simple "save" behavior (front-end only for now)
+    const form = document.getElementById('membershipForm');
+    const msg = document.getElementById('membershipMsg');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      msg.style.display = "block";
+      form.reset();
+    });
+  </script>
+</body>
+</html>
