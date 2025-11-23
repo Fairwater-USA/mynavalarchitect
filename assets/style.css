@@ -335,3 +335,55 @@ img{max-width:100%; display:block}
   .hero-left h1{font-size:34px}
   .hero-card img{height:300px}
 }
+/* CLASS SOCIETIES LOGOS */
+.logos-section{
+  padding-top:10px;
+  padding-bottom:30px;
+}
+
+.logos-head h2{
+  margin:0 0 6px;
+  font-size:22px;
+  letter-spacing:.3px;
+}
+.logos-head p{
+  margin:0;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.logos-row{
+  margin-top:16px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:22px;
+  padding:14px 16px;
+  background:linear-gradient(180deg,var(--card),var(--card-2));
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+}
+
+.logos-row img{
+  height:44px;
+  max-width:160px;
+  object-fit:contain;
+  filter:grayscale(100%) brightness(1.15);
+  opacity:.85;
+  transition:.25s ease;
+}
+
+.logos-row img:hover{
+  filter:grayscale(0%) brightness(1.1);
+  opacity:1;
+  transform:translateY(-2px);
+}
+
+@media (max-width:700px){
+  .logos-row img{
+    height:36px;
+    max-width:130px;
+  }
+}
