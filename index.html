@@ -413,7 +413,7 @@
   </section>
 
   <!-- SUBSCRIPTION (PAYMENT SECTION LATER) -->
-  <section id="subscription">
+  subscription.html
     <div class="container">
       <h2 class="section-title">Membership</h2>
       <p class="section-sub">
@@ -509,17 +509,14 @@
   a.addEventListener("click", e=>{
     const id = a.getAttribute("href");
 
-    // Only smooth-scroll if the link is an internal section
-    if (id.startsWith("#") && document.querySelector(id)) {
-      e.preventDefault();
-      document.querySelector(id).scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-      });
-    }
+   // Only apply smooth scroll if link is EXACTLY a section ID
+if (id.startsWith("#") && id.length > 1 && document.querySelector(id)) {
+  e.preventDefault();
+  document.querySelector(id).scrollIntoView({
+    behavior:"smooth",
+    block:"start"
   });
-});
-
+}
   </script>
 
 </body>
